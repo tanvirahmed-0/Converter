@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Converter</title>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    #Ml{
+     font-size: 20px;
+    border-style: box;
+    border: 2px solid black;
+    border-radius: 6px;
+    color: red;
+}
+#cup{
+    font-size: 25px;
+}
+body{
+    margin-top: 230px;
+}
+</style>
+</head>
+
+<body style="background-image: url(bg.jpg)" >
+     
+    <!-- <img src="converter.png" alt="logo"> -->
+	<h2 style="color: rgb(255, 11, 162); text-align: center; font-size: 50px;">ML to CUP Converter</h2>
+	<p style="text-align: center; font-size: 20px;">Enter a value in the box to convert :</p>
+	<p style="text-align: center; font-size: 22px;">
+		<label>Mililitter</label>
+		<input id="Ml"
+			type="number"
+			oninput="kiloweightConvert(this.value)"
+			onchange="kiloweightConvert(this.value)" />
+	</p>
+    <p style="text-align: center;"><span id="cup"></span></p>
+
+	<script>
+		function kiloweightConvert(value) {
+            document.getElementById("cup").style.color = "blue";
+			document.getElementById("cup").innerHTML = "CUP = " +
+			value / 237;
+		}
+	</script>
+</body>
+</html>
